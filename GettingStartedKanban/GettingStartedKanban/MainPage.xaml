@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GettingStartedKanban"
+             xmlns:kanban="clr-namespace:Syncfusion.SfKanban.XForms;assembly=Syncfusion.SfKanban.XForms"
+             x:Class="GettingStartedKanban.MainPage">
+    <ContentPage.BindingContext>
+        <local:ViewModel>
+        </local:ViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+
+            <kanban:SfKanban x:Name="kanban" AutoGenerateColumns="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemsSource="{Binding Cards}">
+
+            <kanban:SfKanban.Columns>
+
+                <kanban:KanbanColumn x:Name="openColumn" Title="Open"  >
+                </kanban:KanbanColumn>
+
+                <kanban:KanbanColumn x:Name="progressColumn" Title="In Progress">
+                </kanban:KanbanColumn>
+
+                <kanban:KanbanColumn x:Name="codeColumn" Title="Code Review" >
+                </kanban:KanbanColumn>
+
+                <kanban:KanbanColumn x:Name="doneColumn" Title="Done"  >
+                </kanban:KanbanColumn>
+
+            </kanban:SfKanban.Columns>
+
+        </kanban:SfKanban>
+
+    </ContentPage.Content>
+
+</ContentPage>
